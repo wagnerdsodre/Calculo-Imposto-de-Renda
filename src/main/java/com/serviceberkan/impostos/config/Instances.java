@@ -40,13 +40,20 @@ public class Instances implements CommandLineRunner {
 		User u3 = new User(null, "GAbriel Laker D", "gabriellaker@gmail.com");
 		repo.saveAll(Arrays.asList(u1, u2, u3));
 
-		Salary salary = new Salary(null, Calc(1000.00, 0), sdf.parse("26/02/2022"), new UserDTO(u1));
-		Salary salaryb = new Salary(null, Calc(3000.00, 2), sdf.parse("26/03/2022"), new UserDTO(u1));
-		Salary salaryc = new Salary(null, Calc(6000.00, 0), sdf.parse("26/02/2022"), new UserDTO(u3));
-
-		Salaryrepo.saveAll(Arrays.asList(salary, salaryb, salaryc));
+		Salary fevU1 = new Salary(null, Calc(1000.00, 0), sdf.parse("26/02/2022"), new UserDTO(u1));
+		Salary marU1 = new Salary(null, Calc(3000.00, 2), sdf.parse("26/03/2022"), new UserDTO(u1));
+		Salary fevU3 = new Salary(null, Calc(6000.00, 0), sdf.parse("26/02/2022"), new UserDTO(u3));
+		Salaryrepo.saveAll(Arrays.asList(fevU1, marU1, fevU3));
+		
+		u1.getSalary().addAll(Arrays.asList(fevU1,marU1));
+		repo.save(u1);
+		u3.getSalary().addAll(Arrays.asList(fevU3));
+		repo.save(u3);
+		
 	}
 
+	
+	/*Função auxiliar*/
 	private String Calc(Double sal, Integer dependentes) {
 		Double salario = 0.0;
 		Double salfixo = sal;

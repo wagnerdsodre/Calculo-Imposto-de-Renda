@@ -4,8 +4,6 @@ import java.io.Serializable;
 
 import com.serviceberkan.impostos.domain.User;
 
-import lombok.Data;
-
 public class UserDTO implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
