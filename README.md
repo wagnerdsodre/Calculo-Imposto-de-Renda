@@ -3,6 +3,9 @@ Api Rest- Calculo de Imposto de Renda com no modelo orientado a documentos com M
 A Api propoe a entrega de uma solução para cálculo de impostos como INSS E IRPF baseados na tabela 1 e tabela 2.
 <br/>
 <table>
+	<p dir="auto">*<em>O valor máximo do INSS é R$ 642,34</em></p>
+<h4 dir="auto"><a id="user-content-tabela-2---irpf-2019" class="anchor" aria-hidden="true" href="#tabela-2---irpf-2019"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Tabela 1 - INSS 2019*</h4>
+<table>
 <thead>
 <tr>
 <th align="center">Salário (R$)</th>
@@ -63,10 +66,20 @@ A Api propoe a entrega de uma solução para cálculo de impostos como INSS E IR
 </tbody>
 </table>
 	
-	
-	
-	
+<h3>#Endpoints User</h3>
+Listar usuários:
+http://localhost:8080/users
+<br/>
 
+Usuários por id:
+http://localhost:8080/users/{id}
+<br/>
+
+<h3>#Endpoints User Salary</h3>
+http://localhost:8080/users/{id}/salary
+<br/>
+
+<br/>
 ##Tecnologias usadas<br/>
 Java (versão 11 )<br/>
 Banco de Dados (MongoDB)<br/>
