@@ -40,9 +40,9 @@ public class Instances implements CommandLineRunner {
 		User u3 = new User(null, "GAbriel Laker D", "gabriellaker@gmail.com");
 		repo.saveAll(Arrays.asList(u1, u2, u3));
 
-		Salary fevU1 = new Salary(null, Calc(1000.00, 0), sdf.parse("26/02/2022"), new UserDTO(u1));
-		Salary marU1 = new Salary(null, Calc(3000.00, 2), sdf.parse("26/03/2022"), new UserDTO(u1));
-		Salary fevU3 = new Salary(null, Calc(6000.00, 0), sdf.parse("26/02/2022"), new UserDTO(u3));
+		Salary fevU1 = new Salary(null, 1000.00, Calc(1000.00, 0), sdf.parse("26/02/2022"), new UserDTO(u1));
+		Salary marU1 = new Salary(null, 3000.00, Calc(3000.00, 2), sdf.parse("26/03/2022"), new UserDTO(u1));
+		Salary fevU3 = new Salary(null, 6000.00, Calc(6000.00, 0), sdf.parse("26/02/2022"), new UserDTO(u3));
 		Salaryrepo.saveAll(Arrays.asList(fevU1, marU1, fevU3));
 		
 		u1.getSalary().addAll(Arrays.asList(fevU1,marU1));

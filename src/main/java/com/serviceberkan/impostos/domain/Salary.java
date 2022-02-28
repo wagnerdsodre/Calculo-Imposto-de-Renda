@@ -10,15 +10,17 @@ public class Salary implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private String id;
+	private Double salaryDefault;
 	private String salary;
 	private Date date;
 	private UserDTO user;
 	
 	public Salary() {	}
 	
-	public Salary(String id, String salary, Date date, UserDTO user) {
+	public Salary(String id, Double salaryDefault, String salary, Date date, UserDTO user) {
 		super();
 		this.id = id;
+		this.salaryDefault = salaryDefault;
 		this.salary = salary;
 		this.date = date;
 		this.user = user;
@@ -46,6 +48,14 @@ public class Salary implements Serializable {
 
 	public void setDate(Date date) {
 		this.date = date;
+	}
+	
+	public Double getSalaryDefault() {
+		return salaryDefault;
+	}
+
+	public void setSalaryDefault(Double salaryDefault) {
+		this.salaryDefault = salaryDefault;
 	}
 
 	public UserDTO getUser() {
