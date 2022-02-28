@@ -5,23 +5,24 @@ import java.util.Date;
 import java.util.Objects;
 
 import com.serviceberkan.impostos.dto.UserDTO;
+import com.serviceberkan.impostos.service.ImpostoRef;
 
 public class Salary implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private String id;
 	private Double salaryDefault;
-	private String salary;
+	private ImpostoRef salary;
 	private Date date;
 	private UserDTO user;
 	
 	public Salary() {	}
 	
-	public Salary(String id, Double salaryDefault, String salary, Date date, UserDTO user) {
+	public Salary(String id, Double salaryDefault, ImpostoRef imposto, Date date, UserDTO user) {
 		super();
 		this.id = id;
 		this.salaryDefault = salaryDefault;
-		this.salary = salary;
+		this.salary = imposto;
 		this.date = date;
 		this.user = user;
 	}
@@ -34,11 +35,11 @@ public class Salary implements Serializable {
 		this.id = id;
 	}
 
-	public String getSalary() {
+	public ImpostoRef getSalary() {
 		return salary;
 	}
 
-	public void setSalary(String salary) {
+	public void setSalary(ImpostoRef salary) {
 		this.salary = salary;
 	}
 
